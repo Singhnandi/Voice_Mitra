@@ -1,0 +1,118 @@
+/* app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/*
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+*/
+/* Note: @theme inline is specific to some frameworks/tools.
+   For standard Next.js with Tailwind, the prefers-color-scheme block
+   and direct body styles are sufficient for basic dark mode using CSS variables.
+   Thegeist fonts vars might be from a specific Next.js template,
+   you can keep them if using those fonts or remove if not.
+*/
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a; /* Very dark */
+    --foreground: #ededed;
+  }
+}
+
+body {
+  /* Use the CSS variables defined above */
+  background: var(--background);
+  color: var(--foreground);
+  /* Keep your desired font family or use Tailwind's font-sans which maps to your theme */
+  font-family: Arial, Helvetica, sans-serif; /* Or use theme('font.sans') if configured */
+}
+
+/* Custom Animations for attractive UI */
+@keyframes pulse-fast {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Tailwind Utility Classes for custom animations */
+.animate-pulse-fast {
+    animation: pulse-fast 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-fade-in-down {
+    animation: fadeInDown 0.5s ease-out forwards;
+}
+
+.animate-fade-in-left {
+    animation: fadeInLeft 0.5s ease-out forwards;
+}
+
+.animate-fade-in-right {
+    animation: fadeInRight 0.5s ease-out forwards;
+}
+
+/* Optional: Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1E2F; /* Match dark background theme */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A506C; /* A slightly lighter shade */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5C6280;
+}

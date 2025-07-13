@@ -1,0 +1,99 @@
+/* File: styles/Home.module.css */
+
+.container {
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+  }
+  
+  .main {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  /* ... (paste the rest of the CSS from the previous answer here) ... */
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+  }
+  .description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  .buttonContainer {
+    margin-bottom: 2rem;
+  }
+  .micButton {
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .micButton:hover {
+    background-color: #0056b3;
+  }
+  .micButton:active {
+    transform: scale(0.98);
+  }
+  .micButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  .chatArea {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .chatBubbleUser, .chatBubbleAi {
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    max-width: 80%;
+  }
+  .chatBubbleUser {
+    background-color: #e9e9eb;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+  }
+  .chatBubbleAi {
+    background-color: #007aff;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+  }
+  .chatBubbleUser p, .chatBubbleAi p {
+    margin: 0;
+  }
+  .chatBubbleUser p:first-child, .chatBubbleAi p:first-child {
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+    font-size: 0.9rem;
+  }
+  .error {
+    color: #d32f2f;
+    background-color: #ffebee;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
